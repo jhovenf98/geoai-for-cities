@@ -31,7 +31,7 @@ quality near the sea. Each link in the chain above can be measured and predicted
 | Burden map: CalEnviroScreen 4.0, 79 census tracts | **Done** (data in `data/`) |
 | Dust monitors: EPA PM10, 8 sites, 2023–2025 | **Done** (summary in `data/raw/pm10_monitors_2023_2025.json`) |
 | Case studies with drawbacks, solution sketches | **Done** (on the page; sources in `docs/SOLUTIONS.md`) |
-| Model 3, dust-day forecast | **Code written and tested on synthetic data; not yet run on real data** |
+| Model 3, dust-day model | **First real run (Oct 2026)**: skill 0.19 vs. monthly rate, AUC 0.86; explains bad days from same-day wind, not yet a forecast |
 | Models 1, 2, 4, 5 (shoreline, surface, exposure, ground) | Planned; see `docs/METHODS.md` |
 | Drone surveys | Planned; see `docs/DRONE_OPS.md` |
 
@@ -42,6 +42,7 @@ quality near the sea. Each link in the chain above can be measured and predicted
 - From 2023 through 2025, at least one of the eight PM10 monitors exceeded the federal 24-hour standard on 71 different days.
   Westmorland (30 days) and Brawley (29) had the most; Niland, closest to the geothermal field, had 19.
 - Bad dust days cluster in April–May and September–October.
+- Wind explains most bad dust days: 67% of monitor-days over the standard had an hour of 20+ knot wind, vs. about 11% of all days. A model using that day's wind beat each monitor's monthly rate (Brier skill 0.19, AUC 0.86 on 2024–25); without wind it had no skill. It did worse than the monthly rate at Calexico. Westerly wind was about 3× as common on bad days, which fits a lakebed source but does not prove one.
 - PM2.5 ranks low around the sea, but lakebed dust is mostly coarser PM10, which CalEnviroScreen does not include.
 - Monitors cannot say where dust comes from (lakebed, desert, farms). Separating sources is the main research gap.
 
@@ -58,7 +59,8 @@ research/lithium/
 │   ├── 02_pull_epa_pm10.py          download and summarize EPA daily PM10
 │   ├── 03_build_map.py              build the interactive map's SVG
 │   ├── 04_pull_wind_asos.py         hourly airport wind → daily wind features
-│   └── 05_dust_model_baseline.py    Model 3: dust-day prediction vs. two baselines
+│   ├── 05_dust_model_baseline.py    Model 3: dust-day prediction vs. two baselines
+│   └── 06_feature_check.py          Which inputs matter; model without wind
 ├── data/
 │   ├── raw/        snapshots as pulled (CalEnviroScreen, PM10 summary, Salton Sea and state outlines)
 │   └── processed/  outputs of the scripts

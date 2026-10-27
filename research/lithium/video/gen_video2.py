@@ -414,7 +414,7 @@ end = f'''<div class="lay" style="{a('fadeOut', l1-0.2, .4, 'ease', 'forwards')}
  <small>GeoAI for Cities · research plan</small>
  <h1>Lithium Without the Dust:<br>A GeoAI Plan for the Salton Sea</h1>
  <p>Jhoven (Johan) Fernandez</p>
- <div class="url">Full plan, maps and code<br><b>github.com/JohanArisato/geoai-for-cities</b></div>
+ <div class="url">Full plan, maps and code<br><b>github.com/jhovenf98/geoai-for-cities</b></div>
 </div>'''
 parts.append(scene(s, end + host_full(20, 150, 560, SC['end']['start']+0.1, f"animation:point 4s ease-in-out {l1+0.6:.2f}s 1 forwards, wave 2s ease-in-out {T['total']-2.6:.2f}s 1 forwards;"), 10))
 

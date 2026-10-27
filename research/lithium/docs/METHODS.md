@@ -25,9 +25,12 @@ without mitigation; two revenue splits).
 `code/05_dust_model_baseline.py` implements the first version: wind features from `04_pull_wind_asos.py`
 (daily mean and max wind, gusts, hours ≥ 20 knots, share of windy hours from the west and south), season,
 and yesterday's PM10. It reports Brier score, Brier skill against climatology, and ROC AUC for both tests.
-It has been run only on synthetic data so far.
+First real run (October 2026, 2023–2025 data; train 2023, test 2024–25): Brier skill 0.19 against monthly climatology, AUC 0.86;
+persistence did worse than climatology. Leaving one monitor out, it beat climatology at 7 of 8 monitors (worse at Calexico,
+about equal at El Centro). `06_feature_check.py` shows the skill comes from wind: without wind inputs, skill is about 0.
+It uses same-day observed wind, so it explains bad days rather than forecasting them. Numbers: `data/processed/dust_model_results_real.json`.
 
-Planned improvements once it runs on real data: upwind fetch over loose lakebed from Model 2; soil moisture
+Planned improvements: forecast wind in place of observed wind; more training years; upwind fetch over loose lakebed from Model 2; soil moisture
 and recent rain; separate models for spring wind events and late-summer storm outflows; calibration plots.
 
 ## Why a dust forecast matters outside research

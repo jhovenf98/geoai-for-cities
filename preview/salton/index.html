@@ -3242,7 +3242,7 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
       <p class="ps-meta">New project. Proposal draft, no field data yet (October 2026)</p>
       <h1 class="page-title">Can Lithium Come Out of the Salton Sea Without More Dust? A Research Proposal</h1>
       <p class="ps-dek">Imperial County wants to produce lithium from the geothermal brine under the Salton Sea. The towns around the sea already have high asthma rates and frequent bad-air days from dust. This is my plan for measuring how much new projects could add to that dust, and which ways of preventing it are worth the water and money they cost. What follows is what public data already shows, what I would do next, and where I am unsure.</p>
-      <p class="byline">By Jhoven (Johan) Fernandez. Draft of October 21, 2026. <a href="https://github.com/jhovenf98/geoai-for-cities/tree/lithium-plan/research/lithium" target="_blank" rel="noopener">Code and data are on GitHub</a>.</p>
+      <p class="byline">By Jhoven (Johan) Fernandez. Draft of October 21, 2026; updated October 27, 2026 with the first model run and corrected sources. <a href="https://github.com/jhovenf98/geoai-for-cities/tree/lithium-plan/research/lithium" target="_blank" rel="noopener">Code and data are on GitHub</a>.</p>
 
   <section aria-labelledby="q">
     <h2 id="q">The question</h2>
@@ -3313,14 +3313,14 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
       <div class="bars"><div class="" title="Jan: 7 monitor-days above the standard">7<span style="height:30px"></span></div><div class="" title="Feb: 16 monitor-days above the standard">16<span style="height:68px"></span></div><div class="" title="Mar: 11 monitor-days above the standard">11<span style="height:46px"></span></div><div class="" title="Apr: 17 monitor-days above the standard">17<span style="height:72px"></span></div><div class="pk" title="May: 22 monitor-days above the standard">22<span style="height:94px"></span></div><div class="" title="Jun: 9 monitor-days above the standard">9<span style="height:38px"></span></div><div class="" title="Jul: 14 monitor-days above the standard">14<span style="height:59px"></span></div><div class="" title="Aug: 8 monitor-days above the standard">8<span style="height:34px"></span></div><div class="pk" title="Sep: 26 monitor-days above the standard">26<span style="height:110px"></span></div><div class="pk" title="Oct: 25 monitor-days above the standard">25<span style="height:106px"></span></div><div class="" title="Nov: 6 monitor-days above the standard">6<span style="height:25px"></span></div><div class="" title="Dec: 1 monitor-days above the standard">1<span style="height:4px"></span></div></div>
       <div class="bars-x"><span>Jan</span><span>Feb</span><span>Mar</span><span>Apr</span><span>May</span><span>Jun</span><span>Jul</span><span>Aug</span><span>Sep</span><span>Oct</span><span>Nov</span><span>Dec</span></div>
     </figure><figcaption><b>Figure 2.</b> Monitor-days above the PM10 standard by month, all eight EPA monitors, 2023–2025. I counted days flagged as high-wind events, since people breathe that air even when EPA sets those days aside for compliance.</figcaption></figure>
-    <p><b>What this does not show.</b> None of these numbers says where the dust comes from. A 2015–16 study from UC Riverside estimated that exposed lakebed made up about 10% of PM10 at Salton City on average, with desert dust around 45%, but it covered only 18 days and no dust storms. Separating lakebed dust from desert and farm dust is the core of RQ2.</p>
+    <p><b>What this does not show.</b> None of these numbers says where the dust comes from. A UC Riverside study (Frie and others, 2017) sampled for about two and a half weeks in 2015–16 at Salton City and Bombay Beach. It attributed about 9% of PM10 on average to lakebed-like (playa) dust and about 45% to crustal dust, a broader category that includes desert soil. Short sampling windows like these can miss the windiest days. Separating lakebed dust from desert and farm dust is the core of RQ2.</p>
   </section>
 
   <section aria-labelledby="m">
     <h2 id="m">Proposed approach</h2>
     <p>The plan follows the chain from water to people. Each step is a separate model, so each can be checked on its own.</p>
     <div class="tbl"><table>
-      <caption>Table 1. Planned models. None has been run on real data yet.</caption>
+      <caption>Table 1. Planned models. Step 3 has a first run on real data (below); the others have not been run yet.</caption>
       <thead><tr><th>Step</th><th>What it estimates</th><th>Main data</th><th>How I’ll check it</th></tr></thead>
       <tbody>
         <tr><td data-label="Step"><b>1. Shoreline</b></td><td data-label="What it estimates">Exposed lakebed by year under each water scenario</td><td data-label="Main data">Sea level records, lakebed elevation, inflow projections</td><td data-label="How I’ll check it">Run it from 2000 and compare with satellite-mapped shorelines through 2025</td></tr>
@@ -3331,7 +3331,14 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
     </table></div>
     <p>Most of my concern is with Step 2. In my previous study (Part 3 of this series), models that looked accurate on random test points failed on areas they had not seen. A shoreline model has the same risk: neighboring patches of lakebed look alike, so random tests flatter it. I plan to test only on stretches of shore held out completely, and to report where the model does badly.</p>
     <p>The drone work is small and targeted: repeat flights over fixed sample plots each season to label surface types, plus some thermal and particle sampling downwind of plants. Flights would follow FAA Part 107, stay off the Sonny Bono Salton Sea National Wildlife Refuge (launching and landing there is prohibited), and need landowner and tribal permission.</p>
-    <p>I have written a first version of the Step 3 code and tested it on made-up data only. It needs hourly wind data before it produces a real result.</p>
+    <h3>First result: can wind predict bad dust days?</h3>
+    <p>In October 2026 I ran the Step 3 model on real data: daily PM10 from the eight EPA monitors and hourly wind from the Imperial County and Thermal airports, 2023 to 2025. For each monitor and day it estimates the chance of a reading above the PM10 standard, from that day&rsquo;s wind, the season and the previous day&rsquo;s reading. I trained it on 2023 and tested it on 2024 and 2025: 4,916 monitor-days, 80 of them over the standard.</p>
+    <ul class="limits">
+      <li><b>It beat both simple baselines.</b> Its error (Brier score) was about 19% lower than using each monitor&rsquo;s usual rate for that month, and it ranked bad days well (AUC 0.86). Assuming today will be like yesterday did worse than the monthly rate.</li>
+      <li><b>Wind carries the result.</b> Without the wind measures, the same model was no better than the monthly rate. Two in three bad days (67%) had at least one hour of wind at 20 knots or more, against about one in ten days overall, and westerly wind was about three times as common on bad days.</li>
+      <li><b>On monitors it never saw,</b> it beat the monthly rate at seven of eight sites. It did worse at Calexico, on the Mexican border, and only matched it at El Centro.</li>
+    </ul>
+    <p>Three limits matter. The model uses the wind measured that day, so it explains bad days rather than forecasting them; a real forecast would need predicted wind. Holding out one monitor is a weaker test than it sounds, because the other monitors share the same windy days. And westerly wind does not show the dust came from the lakebed: on its way to the Imperial towns it crosses the sea and the exposed shore, but also desert and farmland. Separating those sources is still the open question (RQ2).</p>
   </section>
 
   <section aria-labelledby="else">
@@ -3340,9 +3347,9 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
       <li><b>Owens Lake, California.</b> Los Angeles cut dust emissions there by a reported 99.4%, mostly by keeping the lakebed wet. It has cost more than $2.5 billion and about 60,000 acre-feet of water a year. A 2020 National Academies review found no method yet proven to work as well with much less water. The Salton Sea has no spare water, so targeting matters more here.</li>
       <li><b>The state’s Salton Sea Management Program</b> committed to 29,800 acres of habitat and dust control by 2028. Its progress dashboard lists about 4,782 acres done. I take that as a reason to model mitigation that arrives late or only partly.</li>
       <li><b>Earthquakes.</b> A 2013 study in <i>Science</i> found that earthquake rates at the Salton Sea geothermal field track the volume of fluid pumped and injected. Lithium projects would add brine flow at the same field, so I would include ground-motion monitoring alongside dust.</li>
-      <li><b>Germany’s Upper Rhine Valley</b> has a geothermal lithium project under construction. A nearby geothermal plant at Landau very likely triggered small quakes in 2009 that cracked walls, and rules were tightened afterward. Imperial County has the chance to set such rules first.</li>
+      <li><b>Germany’s Upper Rhine Valley</b> has a geothermal lithium project under construction: Vulcan Energy&rsquo;s Lionheart, which reached financial close on &euro;2.2 billion in May 2026 and targets 24,000 tonnes of lithium hydroxide a year. Nearby, the Landau geothermal plant was followed in 2009 by small quakes, the largest magnitude 2.7. A 2013 study found the shaking reached the damage guideline for very sensitive buildings; residents reported hairline cracks in plaster, though whether the quakes caused them was disputed. Imperial County has the chance to set monitoring and liability rules before projects start.</li>
     </ul>
-    <p class="note">The Owens Lake drone work I found is described only in a drone maker’s case study, and my Germany figures come from news coverage of the company’s announcements. I plan to replace both with primary sources.</p>
+    <p class="note">The Owens Lake drone work I found is described only in a drone maker&rsquo;s case study. I could not find an independent account, so I treat it as unverified.</p>
   </section>
 
   <section aria-labelledby="fix">
@@ -3370,7 +3377,7 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
     <h2 id="next">Next steps</h2>
     <ol class="qs">
       <li>Visit the southeast shore to photograph exposed lakebed and talk with people who work on air quality there.</li>
-      <li>Add hourly wind data and run the dust-day model on 2023–2025, keeping whatever result it gives.</li>
+      <li>Turn the dust-day model into a real forecast using predicted wind, and add earlier years so it has more bad days to learn from.</li>
       <li>Ask researchers who study Salton Sea dust to review this plan.</li>
     </ol>
     <p>If you work on the Salton Sea, air quality or geothermal lithium and see something I have wrong, I would like to hear from you.</p>
@@ -3391,11 +3398,13 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
       <li>Dobson, P., et al. (2023). <a href="https://emp.lbl.gov/publications/characterizing-geothermal-lithium">Characterizing the Geothermal Lithium Resource at the Salton Sea</a>. Lawrence Berkeley National Laboratory.</li>
       <li>OEHHA (2021). <a href="https://oehha.ca.gov/calenviroscreen/report/calenviroscreen-40">CalEnviroScreen 4.0</a>.</li>
       <li>U.S. EPA. <a href="https://aqs.epa.gov/aqsweb/airdata/download_files.html">AirData daily PM10 files</a>, 2023–2025.</li>
-      <li>Frie, A., et al. (2017). Study of Salton Sea airborne particles, <i>Environmental Science &amp; Technology</i>, as summarized by <a href="https://borregosun.com/story/2017/08/01/news/salton-sea-dust-study/3707.html">Borrego Sun</a>.</li>
+      <li>Frie, A. L., Dingle, J. H., Ying, S. C. and Bahreini, R. (2017). The effect of a receding saline lake (the Salton Sea) on airborne particulate matter composition. <i>Environmental Science &amp; Technology</i>. <a href="https://doi.org/10.1021/acs.est.7b01773">doi:10.1021/acs.est.7b01773</a>.</li>
+      <li>Iowa Environmental Mesonet. <a href="https://mesonet.agron.iastate.edu/request/download.phtml">ASOS hourly wind</a>, Imperial County (IPL) and Thermal (TRM) airports, 2023–2025.</li>
       <li>LADWP. <a href="https://ladwp.com/who-we-are/water-system/los-angeles-aqueduct/owens-lake">Owens Lake</a>. National Academies (2020). <a href="https://nap.nationalacademies.org/read/25658/chapter/2">Effectiveness and Impacts of Dust Control Measures for Owens Lake</a>.</li>
       <li>California Natural Resources Agency. <a href="https://projects.saltonsea.ca.gov/Results/ProgressDashboard">Salton Sea Management Program progress dashboard</a> (checked October 2026).</li>
-      <li>Brodsky, E. and Lajoie, L. (2013). Anthropogenic seismicity rates and operational parameters at the Salton Sea Geothermal Field. <i>Science</i>. <a href="https://www.sciencedaily.com/releases/2013/07/130711142355.htm">Summary</a>.</li>
-      <li>The Local (2010). <a href="https://www.thelocal.com/20101208/31671">Geothermal plant likely cause of earthquakes</a>. Kalkine Media (2026). <a href="https://kalkinemedia.com/au/news/announcements/vulcan-energy-secures-eur22-billion-lionheart-financing-accelerates-construction-on-integrated-lithium-project">Vulcan Energy Lionheart financing</a>.</li>
+      <li>Brodsky, E. and Lajoie, L. (2013). Anthropogenic seismicity rates and operational parameters at the Salton Sea Geothermal Field. <i>Science</i> 341, 543–546. <a href="https://doi.org/10.1126/science.1239213">doi:10.1126/science.1239213</a>.</li>
+      <li>Groos, J. C., Fritschen, R. and Ritter, J. R. R. (2013). Untersuchung induzierter Erdbeben hinsichtlich ihrer Sp&uuml;rbarkeit und eventueller Schadenswirkung anhand der DIN 4150 [Perceptibility and possible damage of induced earthquakes under DIN 4150]. <i>Bauingenieur</i> 88, 374&ndash;384. <a href="https://publikationen.bibliothek.kit.edu/1000038446">KIT repository</a>.</li>
+      <li>Vulcan Energy Resources (2026). <a href="https://announcements.asx.com.au/asxpdf/20260528/pdf/0701dgrqknc4b9.pdf">Vulcan&rsquo;s funding package for Lionheart reaches Financial Close</a>. ASX announcement, 28 May 2026.</li>
       <li>U.S. Fish and Wildlife Service. <a href="https://fws.gov/law/drones-unmanned-aircraft">Drones on national wildlife refuges</a> (50 CFR 27.34).</li>
       <li>Natural Earth. Lakes, roads and boundaries (1:10m).</li>
     </ol>

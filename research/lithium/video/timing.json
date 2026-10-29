@@ -1,0 +1,231 @@
+{
+ "total": 187.297,
+ "voice": "af_heart",
+ "scenes": [
+  {
+   "id": "hook",
+   "title": "The lithium question",
+   "start": 0.0,
+   "lines": [
+    {
+     "t": 0.7,
+     "d": 2.261,
+     "text": "Every electric car battery needs lithium."
+    },
+    {
+     "t": 3.311,
+     "d": 5.547,
+     "text": "And California believes it's sitting on a huge supply, under a desert lake called the Salton Sea."
+    },
+    {
+     "t": 9.208,
+     "d": 4.971,
+     "text": "The question is whether we can get it out without making the air worse for the people who live there."
+    }
+   ],
+   "end": 14.579
+  },
+  {
+   "id": "how",
+   "title": "Where the lithium is",
+   "start": 14.579,
+   "lines": [
+    {
+     "t": 14.929,
+     "d": 3.989,
+     "text": "The Salton Sea is California's largest lake, in the southern desert."
+    },
+    {
+     "t": 19.268,
+     "d": 5.611,
+     "text": "The lithium here isn't dug out of rock. It's dissolved in hot, salty brine, deep underground."
+    },
+    {
+     "t": 25.229,
+     "d": 7.701,
+     "text": "Geothermal plants already pump that brine up to make electricity. A new step would pull the lithium out, then send the brine back down."
+    }
+   ],
+   "end": 33.33
+  },
+  {
+   "id": "problem",
+   "title": "The catch",
+   "start": 33.33,
+   "lines": [
+    {
+     "t": 33.68,
+     "d": 2.539,
+     "text": "But there's a catch. The Salton Sea is shrinking."
+    },
+    {
+     "t": 36.569,
+     "d": 6.336,
+     "text": "As the water pulls back, it leaves dry lakebed behind. And on windy days, that lakebed turns to dust."
+    },
+    {
+     "t": 43.255,
+     "d": 9.493,
+     "text": "Lithium plants need water too. In August 2026, a court ruled the biggest project's review hadn't shown how its water use could affect the air."
+    }
+   ],
+   "end": 53.148
+  },
+  {
+   "id": "burden",
+   "title": "Who breathes it",
+   "start": 53.148,
+   "lines": [
+    {
+     "t": 53.498,
+     "d": 2.197,
+     "text": "So who breathes that air? Let's map it."
+    },
+    {
+     "t": 56.045,
+     "d": 6.763,
+     "text": "California scores every census tract for health and pollution burden. Around the sea, that's seventy-nine tracts."
+    },
+    {
+     "t": 63.158,
+     "d": 7.211,
+     "text": "Twenty of them rank in the state's worst fifteen percent for asthma emergency visits. All twenty are in Imperial County."
+    }
+   ],
+   "end": 70.769
+  },
+  {
+   "id": "dust",
+   "title": "Measuring the dust",
+   "start": 70.769,
+   "lines": [
+    {
+     "t": 71.119,
+     "d": 6.293,
+     "text": "Next, the dust itself. Eight EPA monitors around the sea measure coarse dust, called P M ten."
+    },
+    {
+     "t": 77.762,
+     "d": 7.851,
+     "text": "From 2023 through 2025, at least one of them went over the federal health limit on seventy-one different days."
+    },
+    {
+     "t": 85.963,
+     "d": 7.872,
+     "text": "Bad days peak in spring and early fall. But a monitor can't tell if the dust came from the lakebed, the desert, or a farm field."
+    }
+   ],
+   "end": 94.235
+  },
+  {
+   "id": "geoai",
+   "title": "Where GeoAI comes in",
+   "start": 94.235,
+   "lines": [
+    {
+     "t": 94.585,
+     "d": 5.675,
+     "text": "This is where GeoAI comes in: artificial intelligence that learns from maps and images."
+    },
+    {
+     "t": 100.609,
+     "d": 7.381,
+     "text": "Drones can't extract lithium, but they can watch the ground, flying low to label which lakebed is crusted, and which is loose."
+    },
+    {
+     "t": 108.341,
+     "d": 5.461,
+     "text": "A model learns from those labels, then applies them to satellite images of the entire shoreline."
+    },
+    {
+     "t": 114.152,
+     "d": 6.571,
+     "text": "The goal: add wind data, and forecast bad dust days one to three days ahead, so schools and clinics can prepare."
+    }
+   ],
+   "end": 121.123
+  },
+  {
+   "id": "test",
+   "title": "Keeping the model honest",
+   "start": 121.123,
+   "lines": [
+    {
+     "t": 121.473,
+     "d": 3.733,
+     "text": "But a model is only useful if it works in places it hasn't seen."
+    },
+    {
+     "t": 125.556,
+     "d": 6.699,
+     "text": "So instead of testing on random points, we hold out whole stretches of shoreline. If it fails there, it isn't ready."
+    }
+   ],
+   "end": 132.655
+  },
+  {
+   "id": "fixes",
+   "title": "Comparing the fixes",
+   "start": 132.655,
+   "lines": [
+    {
+     "t": 133.005,
+     "d": 2.688,
+     "text": "Then we compare solutions, downsides included."
+    },
+    {
+     "t": 136.043,
+     "d": 10.944,
+     "text": "At Owens Lake, flooding the dry lakebed cut dust by more than ninety-nine percent. But it cost over two and a half billion dollars, and about sixty thousand acre-feet of water a year."
+    },
+    {
+     "t": 147.337,
+     "d": 8.939,
+     "text": "Gravel needs no water, but tons of rock. Habitat ponds help birds, but the state has finished only about a sixth of its 2028 goal."
+    },
+    {
+     "t": 156.625,
+     "d": 4.843,
+     "text": "No single fix wins. The models help decide which patch of lakebed gets which fix."
+    }
+   ],
+   "end": 161.868
+  },
+  {
+   "id": "scen",
+   "title": "Comparing futures",
+   "start": 161.868,
+   "lines": [
+    {
+     "t": 162.218,
+     "d": 7.253,
+     "text": "Finally, the models run scenarios: no new lithium, one big project, or full build-out, with and without dust control."
+    },
+    {
+     "t": 169.821,
+     "d": 3.136,
+     "text": "That way, we can compare futures before anything is built."
+    }
+   ],
+   "end": 173.357
+  },
+  {
+   "id": "end",
+   "title": "Read more",
+   "start": 173.357,
+   "lines": [
+    {
+     "t": 173.707,
+     "d": 4.139,
+     "text": "Lithium and clean air don't have to be a trade-off. But only if we measure."
+    },
+    {
+     "t": 178.196,
+     "d": 6.101,
+     "text": "The full plan, the interactive maps, and all the code are free to explore. Links are in the description."
+    }
+   ],
+   "end": 187.297
+  }
+ ]
+}

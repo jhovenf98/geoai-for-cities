@@ -1,0 +1,37 @@
+{
+ "data": "real",
+ "note": "First real run, October 2026: EPA AirData daily PM10 (8 monitors) and IEM ASOS hourly wind (IPL, TRM), 2023-2025. Run with the unmodified scripts 02, 04, 05 and 06 inside a browser (Pyodide), because the build machine could not reach EPA or IEM. Values transcribed from that run's output; per-monitor Brier/AUC beyond those listed were not kept. Rerun 02 -> 04 -> 05 -> 06 to regenerate the full files.",
+ "wind_station_days": 2096,
+ "wind_days_missing": 94,
+ "time_split": {
+  "train": "2023", "test": "2024-2025",
+  "n_test_days": 4916, "bad_days_in_test": 80,
+  "climatology": {"brier": 0.0176, "skill_vs_climatology": 0.0, "auc": 0.515},
+  "persistence": {"brier": 0.0289, "skill_vs_climatology": -0.647},
+  "boosting": {"brier": 0.0143, "skill_vs_climatology": 0.188, "auc": 0.862}
+ },
+ "leave_one_monitor_out_boosting_skill_vs_climatology": {
+  "025-0005 Calexico": -0.307,
+  "025-0007 Brawley": 0.402,
+  "025-1003 El Centro": 0.012,
+  "025-4003 Westmorland": 0.427,
+  "025-4004 Niland": 0.424,
+  "065-0500 (EPA site name '29 Palms'; coordinates 33.72, -116.19)": 0.229,
+  "065-2005 Mecca": 0.092,
+  "065-2007 Indio": 0.16
+ },
+ "leave_one_monitor_out_note": "Persistence had negative skill at every monitor. Calexico boosting AUC 0.741.",
+ "feature_check": {
+  "n_rows": 7274, "train_rows": 2358, "train_bad": 68, "test_base_rate": 0.0163,
+  "permutation_importance_brier_x1e4": {"wind_mean_kt": 30.18, "share_west": 29.47, "wind_max_kt": 27.91, "month_sin": 16.17, "pm10_lag1": 10.24, "gust_max_kt": 9.46, "month_cos": 4.33, "share_south": 0.11, "over_lag1": 0.0, "hours_ge_20kt": -0.62},
+  "no_wind_model_skill_vs_climatology": -0.004,
+  "share_with_20kt_hour": {"bad_days": 0.669, "all_days": 0.106},
+  "mean_share_west": {"bad_days": 0.297, "all_days": 0.096}
+ },
+ "limits": [
+  "Uses same-day observed wind, so it explains bad days rather than forecasting them.",
+  "Leave-one-monitor-out shares days with the training monitors, so it overstates skill at a truly new place.",
+  "Westerly wind does not prove a lakebed source; source attribution (RQ2) is still open.",
+  "Only one training year (68 bad monitor-days)."
+ ]
+}

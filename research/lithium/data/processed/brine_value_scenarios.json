@@ -1,0 +1,357 @@
+{
+ "note": "Scenario calculator, not a forecast. Operating margin excludes capital costs, financing and income tax.",
+ "inputs": {
+  "lithium_in_brine_t_lce": 127000,
+  "sustainable_t_lce": 115000,
+  "recovery": {
+   "low": 0.5,
+   "mid": 0.75,
+   "high": 0.9
+  },
+  "price_usd_per_t": {
+   "low": 10000,
+   "mid": 15000,
+   "high": 22400
+  },
+  "cost_usd_per_t": {
+   "low": 6000,
+   "mid": 9000,
+   "high": 12000
+  },
+  "producers": 3
+ },
+ "headline": {
+  "pessimistic": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 635,
+   "operating_cost_musd": 762,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": -153,
+   "tax_share_of_revenue_pct": 4.1,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "middle": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 1429,
+   "operating_cost_musd": 857,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 525,
+   "tax_share_of_revenue_pct": 3.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "optimistic": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 2560,
+   "operating_cost_musd": 686,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 1813,
+   "tax_share_of_revenue_pct": 2.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  }
+ },
+ "grid": {
+  "rec_low|price_low|cost_low": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 635,
+   "operating_cost_musd": 381,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 228,
+   "tax_share_of_revenue_pct": 4.1,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_low|cost_mid": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 635,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 37,
+   "tax_share_of_revenue_pct": 4.1,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_low|cost_high": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 635,
+   "operating_cost_musd": 762,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": -153,
+   "tax_share_of_revenue_pct": 4.1,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_mid|cost_low": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 952,
+   "operating_cost_musd": 381,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 545,
+   "tax_share_of_revenue_pct": 2.7,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_mid|cost_mid": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 952,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 355,
+   "tax_share_of_revenue_pct": 2.7,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_mid|cost_high": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 952,
+   "operating_cost_musd": 762,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 164,
+   "tax_share_of_revenue_pct": 2.7,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_high|cost_low": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 1422,
+   "operating_cost_musd": 381,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 1015,
+   "tax_share_of_revenue_pct": 1.8,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_high|cost_mid": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 1422,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 825,
+   "tax_share_of_revenue_pct": 1.8,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_low|price_high|cost_high": {
+   "tonnes_lce": 63500,
+   "revenue_musd": 1422,
+   "operating_cost_musd": 762,
+   "excise_tax_musd": 26.1,
+   "operating_margin_musd": 634,
+   "tax_share_of_revenue_pct": 1.8,
+   "county_musd": 20.9,
+   "affected_communities_min_musd": 6.3,
+   "salton_sea_fund_musd": 5.2
+  },
+  "rec_mid|price_low|cost_low": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 952,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 335,
+   "tax_share_of_revenue_pct": 4.9,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_low|cost_mid": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 952,
+   "operating_cost_musd": 857,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 49,
+   "tax_share_of_revenue_pct": 4.9,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_low|cost_high": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 952,
+   "operating_cost_musd": 1143,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": -237,
+   "tax_share_of_revenue_pct": 4.9,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_mid|cost_low": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 1429,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 811,
+   "tax_share_of_revenue_pct": 3.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_mid|cost_mid": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 1429,
+   "operating_cost_musd": 857,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 525,
+   "tax_share_of_revenue_pct": 3.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_mid|cost_high": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 1429,
+   "operating_cost_musd": 1143,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 240,
+   "tax_share_of_revenue_pct": 3.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_high|cost_low": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 2134,
+   "operating_cost_musd": 572,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 1516,
+   "tax_share_of_revenue_pct": 2.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_high|cost_mid": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 2134,
+   "operating_cost_musd": 857,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 1230,
+   "tax_share_of_revenue_pct": 2.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_mid|price_high|cost_high": {
+   "tonnes_lce": 95250,
+   "revenue_musd": 2134,
+   "operating_cost_musd": 1143,
+   "excise_tax_musd": 46.2,
+   "operating_margin_musd": 944,
+   "tax_share_of_revenue_pct": 2.2,
+   "county_musd": 37.0,
+   "affected_communities_min_musd": 11.1,
+   "salton_sea_fund_musd": 9.2
+  },
+  "rec_high|price_low|cost_low": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1143,
+   "operating_cost_musd": 686,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 396,
+   "tax_share_of_revenue_pct": 5.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_low|cost_mid": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1143,
+   "operating_cost_musd": 1029,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 53,
+   "tax_share_of_revenue_pct": 5.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_low|cost_high": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1143,
+   "operating_cost_musd": 1372,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": -290,
+   "tax_share_of_revenue_pct": 5.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_mid|cost_low": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1714,
+   "operating_cost_musd": 686,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 967,
+   "tax_share_of_revenue_pct": 3.6,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_mid|cost_mid": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1714,
+   "operating_cost_musd": 1029,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 624,
+   "tax_share_of_revenue_pct": 3.6,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_mid|cost_high": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 1714,
+   "operating_cost_musd": 1372,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 281,
+   "tax_share_of_revenue_pct": 3.6,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_high|cost_low": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 2560,
+   "operating_cost_musd": 686,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 1813,
+   "tax_share_of_revenue_pct": 2.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_high|cost_mid": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 2560,
+   "operating_cost_musd": 1029,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 1470,
+   "tax_share_of_revenue_pct": 2.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  },
+  "rec_high|price_high|cost_high": {
+   "tonnes_lce": 114300,
+   "revenue_musd": 2560,
+   "operating_cost_musd": 1372,
+   "excise_tax_musd": 61.4,
+   "operating_margin_musd": 1127,
+   "tax_share_of_revenue_pct": 2.4,
+   "county_musd": 49.2,
+   "affected_communities_min_musd": 14.7,
+   "salton_sea_fund_musd": 12.3
+  }
+ }
+}

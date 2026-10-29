@@ -1,0 +1,263 @@
+1
+00:00:00,700 --> 00:00:02,961
+Every electric car battery needs lithium.
+
+2
+00:00:03,311 --> 00:00:06,893
+And California believes it's sitting on a huge supply, under a
+
+3
+00:00:06,893 --> 00:00:08,858
+desert lake called the Salton Sea.
+
+4
+00:00:09,208 --> 00:00:12,389
+The question is whether we can get it out without making the air
+
+5
+00:00:12,389 --> 00:00:14,179
+worse for the people who live there.
+
+6
+00:00:14,929 --> 00:00:18,918
+The Salton Sea is California's largest lake, in the southern desert.
+
+7
+00:00:19,268 --> 00:00:21,647
+The lithium here isn't dug out of rock.
+
+8
+00:00:21,647 --> 00:00:24,879
+It's dissolved in hot, salty brine, deep underground.
+
+9
+00:00:25,229 --> 00:00:28,993
+Geothermal plants already pump that brine up to make electricity.
+
+10
+00:00:28,993 --> 00:00:32,640
+A new step would pull the lithium out, then send the brine back
+
+11
+00:00:32,640 --> 00:00:32,930
+down.
+
+12
+00:00:33,680 --> 00:00:34,738
+But there's a catch.
+
+13
+00:00:34,738 --> 00:00:36,219
+The Salton Sea is shrinking.
+
+14
+00:00:36,569 --> 00:00:39,990
+As the water pulls back, it leaves dry lakebed behind.
+
+15
+00:00:39,990 --> 00:00:42,905
+And on windy days, that lakebed turns to dust.
+
+16
+00:00:43,255 --> 00:00:45,289
+Lithium plants need water too.
+
+17
+00:00:45,289 --> 00:00:49,697
+In August 2026, a court ruled the biggest project's review hadn't
+
+18
+00:00:49,697 --> 00:00:52,748
+shown how its water use could affect the air.
+
+19
+00:00:53,498 --> 00:00:54,943
+So who breathes that air?
+
+20
+00:00:54,943 --> 00:00:55,695
+Let's map it.
+
+21
+00:00:56,045 --> 00:00:59,762
+California scores every census tract for health and pollution
+
+22
+00:00:59,762 --> 00:01:00,188
+burden.
+
+23
+00:01:00,188 --> 00:01:02,808
+Around the sea, that's seventy-nine tracts.
+
+24
+00:01:03,158 --> 00:01:07,252
+Twenty of them rank in the state's worst fifteen percent for asthma
+
+25
+00:01:07,252 --> 00:01:08,291
+emergency visits.
+
+26
+00:01:08,291 --> 00:01:10,369
+All twenty are in Imperial County.
+
+27
+00:01:11,119 --> 00:01:12,640
+Next, the dust itself.
+
+28
+00:01:12,640 --> 00:01:16,859
+Eight EPA monitors around the sea measure coarse dust, called
+
+29
+00:01:16,859 --> 00:01:17,412
+P M ten.
+
+30
+00:01:17,762 --> 00:01:22,516
+From 2023 through 2025, at least one of them went over the federal
+
+31
+00:01:22,516 --> 00:01:25,613
+health limit on seventy-one different days.
+
+32
+00:01:25,963 --> 00:01:28,400
+Bad days peak in spring and early fall.
+
+33
+00:01:28,400 --> 00:01:32,336
+But a monitor can't tell if the dust came from the lakebed, the
+
+34
+00:01:32,336 --> 00:01:33,835
+desert, or a farm field.
+
+35
+00:01:34,585 --> 00:01:36,499
+This is where GeoAI comes in:
+
+36
+00:01:36,499 --> 00:01:40,260
+artificial intelligence that learns from maps and images.
+
+37
+00:01:40,609 --> 00:01:44,565
+Drones can't extract lithium, but they can watch the ground, flying
+
+38
+00:01:44,565 --> 00:01:47,990
+low to label which lakebed is crusted, and which is loose.
+
+39
+00:01:48,341 --> 00:01:52,020
+A model learns from those labels, then applies them to satellite
+
+40
+00:01:52,020 --> 00:01:53,802
+images of the entire shoreline.
+
+41
+00:01:54,152 --> 00:01:54,690
+The goal:
+
+42
+00:01:54,690 --> 00:01:58,632
+add wind data, and forecast bad dust days one to three days ahead,
+
+43
+00:01:58,632 --> 00:02:00,723
+so schools and clinics can prepare.
+
+44
+00:02:01,473 --> 00:02:05,206
+But a model is only useful if it works in places it hasn't seen.
+
+45
+00:02:05,556 --> 00:02:09,493
+So instead of testing on random points, we hold out whole stretches
+
+46
+00:02:09,493 --> 00:02:10,257
+of shoreline.
+
+47
+00:02:10,257 --> 00:02:12,255
+If it fails there, it isn't ready.
+
+48
+00:02:13,005 --> 00:02:15,693
+Then we compare solutions, downsides included.
+
+49
+00:02:16,043 --> 00:02:19,752
+At Owens Lake, flooding the dry lakebed cut dust by more than
+
+50
+00:02:19,752 --> 00:02:20,968
+ninety-nine percent.
+
+51
+00:02:20,968 --> 00:02:24,859
+But it cost over two and a half billion dollars, and about sixty
+
+52
+00:02:24,859 --> 00:02:26,987
+thousand acre-feet of water a year.
+
+53
+00:02:27,337 --> 00:02:30,130
+Gravel needs no water, but tons of rock.
+
+54
+00:02:30,130 --> 00:02:34,530
+Habitat ponds help birds, but the state has finished only about
+
+55
+00:02:34,530 --> 00:02:36,276
+a sixth of its 2028 goal.
+
+56
+00:02:36,625 --> 00:02:37,775
+No single fix wins.
+
+57
+00:02:37,775 --> 00:02:41,468
+The models help decide which patch of lakebed gets which fix.
+
+58
+00:02:42,218 --> 00:02:44,362
+Finally, the models run scenarios:
+
+59
+00:02:44,362 --> 00:02:48,651
+no new lithium, one big project, or full build-out, with and without
+
+60
+00:02:48,651 --> 00:02:49,471
+dust control.
+
+61
+00:02:49,821 --> 00:02:52,957
+That way, we can compare futures before anything is built.
+
+62
+00:02:53,707 --> 00:02:56,560
+Lithium and clean air don't have to be a trade-off.
+
+63
+00:02:56,560 --> 00:02:57,846
+But only if we measure.
+
+64
+00:02:58,196 --> 00:03:01,904
+The full plan, the interactive maps, and all the code are free
+
+65
+00:03:01,904 --> 00:03:02,562
+to explore.
+
+66
+00:03:02,562 --> 00:03:04,297
+Links are in the description.

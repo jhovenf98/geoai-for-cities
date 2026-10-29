@@ -1,0 +1,13 @@
+{"source":"EPA AirData daily_81102_{2023,2024,2025}.zip (PM10 FRM/FEM, Pollutant Standard 'PM10 24-hour 2006'); Imperial (025) and Riverside (065) east of -116.45; Event Type 'Excluded' rows dropped, flagged-event days kept; max across POCs per site-day; exceedance = daily mean >=155 ug/m3 (24-h standard 150, rounded). Pulled 2026-10-21.",
+"monitors":[
+{"id":"06-025-0005","name":"Calexico (Ethel St)","lat":32.676,"lon":-115.483,"y":{"2023":[361,47,2,199],"2024":[360,53,4,183],"2025":[357,53,5,276]}},
+{"id":"06-025-0007","name":"Brawley (Main St)","lat":32.978,"lon":-115.539,"y":{"2023":[361,49,13,579],"2024":[361,42,5,332],"2025":[353,47,11,334]}},
+{"id":"06-025-1003","name":"El Centro (9th St)","lat":32.792,"lon":-115.563,"y":{"2023":[360,36,3,231],"2024":[362,39,3,194],"2025":[357,39,3,180]}},
+{"id":"06-025-4003","name":"Westmorland","lat":33.032,"lon":-115.624,"y":{"2023":[358,46,14,609],"2024":[361,39,5,461],"2025":[356,43,11,327]}},
+{"id":"06-025-4004","name":"Niland (English Rd)","lat":33.214,"lon":-115.545,"y":{"2023":[352,45,13,491],"2024":[360,39,2,460],"2025":[357,40,4,537]}},
+{"id":"06-065-0500","name":"Indio (site 0500, partial years)","lat":33.720,"lon":-116.190,"y":{"2023":[237,77,21,748],"2024":[24,68,2,254],"2025":[220,49,4,320]}},
+{"id":"06-065-2005","name":"Mecca (Saul Martinez)","lat":33.572,"lon":-116.064,"y":{"2023":[362,46,7,480],"2024":[362,44,6,311],"2025":[358,44,8,483]}},
+{"id":"06-065-2007","name":"Indio (Amistad High School)","lat":33.725,"lon":-116.207,"y":{"2024":[355,47,6,340],"2025":[355,41,10,302]}}],
+"fields":"[days with data, mean daily PM10 ug/m3, days >=155, max daily]",
+"site_days_over_by_month_2023_2025":[7,16,11,17,22,9,14,8,26,25,6,1],
+"dates_any_site_over":71}

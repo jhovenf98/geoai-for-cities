@@ -1,4 +1,66 @@
 <!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}
+/* ---- Lost in the Crowd post (scoped, extends .ls) ---- */
+.lc{--c-gps:#3D5A36;--c-bt:#2F5B6B;--c-lora:#7E4F2C;--c-sat:#B9973F;--c-grp:#6B4E7A}
+.lc .lc-status{background:var(--paper);border:1px solid var(--rule);padding:18px 20px;display:grid;gap:12px;min-width:0}
+.lc .lc-status h2{font-size:1rem;text-transform:uppercase;letter-spacing:.08em;color:var(--clay)}
+.lc .lc-fig{background:var(--paper);border:1px solid var(--rule);padding:16px;gap:12px;min-width:0}
+.lc .lc-cyc-wrap{max-width:720px;margin:0 auto;width:100%;min-width:0}
+.lc .lc-fig>*,.lc .lc-cases>*,.lc .lc-tl>*{min-width:0}
+.lc .lc-cyc{width:100%;height:auto;display:block;font-family:var(--body)}
+.lc .lc-ring{fill:none;stroke:var(--rule);stroke-width:1;stroke-dasharray:2 6}
+.lc .lc-e{fill:none;stroke-width:3;stroke-linecap:round}
+.lc .lc-e.use{stroke:var(--moss)}
+.lc .lc-e.alt{stroke:var(--ink-2);stroke-dasharray:7 7;opacity:.7}
+.lc .lc-arh{fill:var(--moss)}
+.lc .lc-arh2{fill:var(--ink-2)}
+.lc .lc-p{fill:var(--gold);stroke:var(--paper);stroke-width:1.5}
+.lc .lc-p.alt{fill:var(--ink-2)}
+.lc .lc-lab circle{fill:var(--moss);stroke:var(--paper);stroke-width:2}
+.lc .lc-lab.alt circle{fill:var(--paper);stroke:var(--ink-2);stroke-width:1.5}
+.lc .lc-n{fill:var(--paper);font-size:13px;font-weight:700;text-anchor:middle}
+.lc .lc-lab.alt .lc-n{fill:var(--ink-2)}
+.lc .lc-t{fill:var(--ink);font-size:15px;font-weight:700}
+.lc .lc-s{fill:var(--ink-2);font-size:13px}
+.lc .lc-node circle{stroke:var(--paper);stroke-width:3}
+.lc .lc-node text{fill:#FBF7EE;font-size:16px;font-weight:700;text-anchor:middle}
+.lc .lc-node text.sm{font-size:13px;font-weight:500}
+.lc .lc-node.n-gps circle{fill:var(--c-gps)}
+.lc .lc-node.n-me circle,.lc .lc-node.n-grp circle{fill:var(--c-grp)}
+.lc .lc-node.n-bt circle{fill:var(--c-bt)}
+.lc .lc-node.n-lora circle{fill:var(--c-lora)}
+.lc .lc-node.n-sat circle{fill:var(--c-sat)}
+.lc .lc-node.n-sat text{fill:#2B2219}
+.lc .lc-mid{fill:var(--ink-2);font-size:15px;font-style:italic;text-anchor:middle}
+.lc .lc-mid.sm{font-size:15px}
+.lc .lc-key{display:flex;flex-wrap:wrap;gap:8px 20px;font-size:.85rem;color:var(--ink-2);justify-content:center}
+.lc .lc-key span{display:inline-flex;align-items:center;gap:8px}
+.lc .lc-key .k{display:inline-block;width:28px;height:0;border-top:3px solid var(--moss)}
+.lc .lc-key .k.alt{border-top:3px dashed var(--ink-2)}
+.lc .lc-links{margin:0;padding-left:1.4em;display:grid;gap:8px;font-size:.93rem}
+.lc .lc-links li::marker{font-weight:700;color:var(--moss)}
+.lc .lc-links li:nth-child(3)::marker,.lc .lc-links li:nth-child(4)::marker{color:var(--ink-2)}
+.lc .lc-tl{list-style:none;margin:0;padding:0;display:grid;gap:0}
+.lc .lc-tl li{display:grid;grid-template-columns:3.4em minmax(0,1fr);gap:0;margin:0}
+.lc .lc-tl .y{font-family:var(--mono);font-size:.85rem;font-weight:600;color:var(--ink-2);padding:12px 12px 0 0;text-align:right}
+.lc .lc-tl li>div{display:grid;gap:2px;padding:10px 0 12px 20px;border-left:2px solid var(--rule);position:relative;min-width:0}
+.lc .lc-tl li>div::before{content:"";position:absolute;left:-8px;top:15px;width:14px;height:14px;border-radius:50%;background:var(--dot,var(--moss));border:2px solid var(--paper)}
+.lc .lc-tl b{font-size:.98rem}
+.lc .lc-tl li>div>span{font-size:.9rem;color:var(--ink-2);line-height:1.5;display:block;height:auto;position:static}
+.lc .lc-tl li.t-gps{--dot:var(--c-gps)}
+.lc .lc-tl li.t-bt{--dot:var(--c-bt)}
+.lc .lc-tl li.t-lora{--dot:var(--c-lora)}
+.lc .lc-tl li.t-sat{--dot:var(--c-sat)}
+.lc .lc-tl li.t-net{--dot:var(--ink-2)}
+.lc .lc-tl li.t-crowd{--dot:var(--c-grp)}
+.lc .lc-tlkey{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:.82rem;color:var(--ink-2)}
+.lc .lc-tlkey span{display:inline-flex;align-items:center;gap:6px}
+.lc .lc-tlkey i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.lc .lc-cases .note{padding:0;margin:0;border:0;background:none}
+.lc .lc-cases{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 22px}
+.lc .lc-cases .case p{margin:0}
+.lc .lc-cases .case b{font-size:1rem}
+@media (max-width:640px){.lc .lc-cases{grid-template-columns:1fr}.lc .lc-t{font-size:17px}.lc .lc-s{display:none}.lc .lc-fig{padding:10px}}
+@media (prefers-reduced-motion:reduce){.lc .lc-pulses{display:none}}
 /* ---- Salton Sea proposal (scoped) ---- */
 .ls{
   --bg:#F3EBDD; --paper:#FBF7EE; --ink:#2B2219; --ink-2:#5A4A39; --rule:#D6C7AC;
@@ -3469,6 +3531,210 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
 
     </article>
   </div>
+  <div class="page post-page" id="lost-view" hidden>
+    <a class="back" href="#blog">Back to research</a>
+    <article class="ps p3 ls lc">
+      <span class="bs-pill">Research proposal, draft · about a 12-minute read</span>
+      <p class="ps-meta">New project. Proposal draft with a first synthetic simulation, no field data yet (November 2026)</p>
+      <h1 class="page-title">Lost in the Crowd: Can Phones Carry Messages When the Network Fails?</h1>
+      <p class="ps-dek">People lose each other in crowds, and crowds are where phone networks fail first. Satellites can tell your phone where you are, but they can't tell your friends. This is my plan for testing whether phones, passing sealed messages hand to hand, can close that gap, and what I've found so far from case studies and a first simulation.</p>
+      <p class="byline">By Jhoven (Johan) Fernandez. Draft of November 19, 2026. <a href="https://github.com/jhovenf98/geoai-for-cities/tree/lost-in-the-crowd/research/lost-in-the-crowd" target="_blank" rel="noopener">Code and data are on GitHub</a>.</p>
+
+  <div class="lc-status">
+    <h2>Where this stands</h2>
+    <ul class="checks">
+      <li><span class="ok">✓</span><span>Relay designed and partly built: sealed group messages with an expiry and a hop limit</span></li>
+      <li><span class="ok">✓</span><span>Rule-based location features built: distance and direction to a friend, places described in words, walk times</span></li>
+      <li><span class="ok">✓</span><span>First synthetic simulation run (November 2026), 3 forwarding schemes × 2 ways of moving</span></li>
+      <li><span class="ok">✓</span><span>Official site maps for 97 large U.S. events checked for GPS calibration and reuse rights</span></li>
+      <li><span class="wait">…</span><span>Field test with 2–4 iPhones: planned</span></li>
+      <li><span class="wait">…</span><span>GeoAI models (likely position, crowd density, meeting points): planned, not built</span></li>
+    </ul>
+  </div>
+
+  <section aria-labelledby="lc-q">
+    <h2 id="lc-q">The question</h2>
+    <p>Picture the end of a stadium concert, a parade, a packed beach on a holiday weekend, or the first hour after a blackout. Tens of thousands of phones are trying to reach a handful of towers, or the towers are down. Your phone still knows where you are, because GPS satellites only send and never need to hear back. What fails is telling anyone else.</p>
+    <p>I ran into this while building a group-finding app for large music festivals, which are temporary cities with poor signal and a timetable that moves the crowd. The fix I built is old networking: store, carry and forward. My phone seals a short message for my group. Any phone running the same app, including a stranger's, can hold it without being able to read it, and hand it on to the next phone it meets. The question is whether that works well enough to matter.</p>
+    <ol class="qs">
+      <li><b>RQ1.</b> How often, and how fast, does a sealed message reach a small group through a crowd, depending on how many people run the app?</li>
+      <li><b>RQ2.</b> How much does the way crowds actually move, clustering at attractions and mixing between them, change the answer compared with the random-walk models most studies use?</li>
+      <li><b>RQ3.</b> Can spatial models (where a lost person probably is, where the crowd will be) make delivery faster or meeting up easier, and for whom does it fail?</li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="lc-loop">
+    <h2 id="lc-loop">Four technologies, one loop</h2>
+    <p>No single radio solves this. Satellite positioning knows where you are but can't send. Bluetooth and peer-to-peer Wi-Fi reach only the people near you. Long-range mesh radios reach kilometres but need extra hardware. Satellite texting reaches the sky but only when a satellite is overhead and you have a clear view. Figure 1 shows how they hand off to each other. The solid links are the ones my design uses; the dashed ones are other routes that exist today.</p>
+    <figure class="lc-fig">
+      <div class="lc-cyc-wrap">
+      <svg class="lc-cyc" viewBox="-40 0 840 600" role="img" aria-labelledby="lc-cyc-t lc-cyc-d">
+        <title id="lc-cyc-t">How satellite positioning, phone-to-phone radio, mesh radio and satellite texting connect in a loop</title>
+        <desc id="lc-cyc-d">Six points in a circle, linked clockwise: GPS satellites to your phone, your phone to nearby phones, nearby phones to a long-range mesh radio, the mesh radio to a node that regains signal, that node to your group or rescuers, and your group back to GPS. Each link is labelled with what passes along it.</desc>
+        <defs>
+          <marker id="lc-ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="lc-arh"/></marker>
+          <marker id="lc-ar2" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" class="lc-arh2"/></marker>
+        </defs>
+        <circle cx="380" cy="300" r="205" class="lc-ring"/>
+        <!-- links (clockwise arcs between node positions) -->
+        <path id="lc-e1" class="lc-e use" d="M432,104 A205,205 0 0 1 555,195" marker-end="url(#lc-ar)"/>
+        <path id="lc-e2" class="lc-e use" d="M580,262 A205,205 0 0 1 555,405" marker-end="url(#lc-ar)"/>
+        <path id="lc-e3" class="lc-e alt" d="M520,452 A205,205 0 0 1 418,501" marker-end="url(#lc-ar2)"/>
+        <path id="lc-e4" class="lc-e alt" d="M342,501 A205,205 0 0 1 240,452" marker-end="url(#lc-ar2)"/>
+        <path id="lc-e5" class="lc-e use" d="M205,405 A205,205 0 0 1 180,262" marker-end="url(#lc-ar)"/>
+        <path id="lc-e6" class="lc-e use" d="M205,195 A205,205 0 0 1 328,104" marker-end="url(#lc-ar)"/>
+        <!-- moving pulses -->
+        <g class="lc-pulses">
+          <circle r="5" class="lc-p"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#lc-e1"/></animateMotion></circle>
+          <circle r="5" class="lc-p"><animateMotion dur="2.6s" begin="-.45s" repeatCount="indefinite"><mpath href="#lc-e2"/></animateMotion></circle>
+          <circle r="5" class="lc-p alt"><animateMotion dur="2.6s" begin="-.9s" repeatCount="indefinite"><mpath href="#lc-e3"/></animateMotion></circle>
+          <circle r="5" class="lc-p alt"><animateMotion dur="2.6s" begin="-1.35s" repeatCount="indefinite"><mpath href="#lc-e4"/></animateMotion></circle>
+          <circle r="5" class="lc-p"><animateMotion dur="2.6s" begin="-1.8s" repeatCount="indefinite"><mpath href="#lc-e5"/></animateMotion></circle>
+          <circle r="5" class="lc-p"><animateMotion dur="2.6s" begin="-2.25s" repeatCount="indefinite"><mpath href="#lc-e6"/></animateMotion></circle>
+        </g>
+        <!-- link labels: number badge + short text -->
+        <g class="lc-lab"><circle cx="520" cy="128" r="13"/><text x="520" y="133" class="lc-n">1</text><text x="540" y="118" class="lc-t">Position fix</text><text x="540" y="135" class="lc-s">10–20 m or better</text></g>
+        <g class="lc-lab"><circle cx="602" cy="335" r="13"/><text x="602" y="340" class="lc-n">2</text><text x="622" y="326" class="lc-t">Sealed hand-off</text><text x="622" y="343" class="lc-s">Bluetooth or Wi-Fi</text></g>
+        <g class="lc-lab alt"><circle cx="478" cy="512" r="13"/><text x="478" y="517" class="lc-n">3</text><text x="470" y="548" class="lc-t" text-anchor="middle">Pair to a radio</text><text x="470" y="565" class="lc-s" text-anchor="middle">LoRa, 2–5 km typical</text></g>
+        <g class="lc-lab alt"><circle cx="282" cy="512" r="13"/><text x="282" y="517" class="lc-n">4</text><text x="290" y="548" class="lc-t" text-anchor="middle">Back in signal</text><text x="290" y="565" class="lc-s" text-anchor="middle">tower or satellite text</text></g>
+        <g class="lc-lab"><circle cx="158" cy="335" r="13"/><text x="158" y="340" class="lc-n">5</text><text x="138" y="326" class="lc-t" text-anchor="end">Message arrives</text><text x="138" y="343" class="lc-s" text-anchor="end">group or rescuers</text></g>
+        <g class="lc-lab"><circle cx="240" cy="128" r="13"/><text x="240" y="133" class="lc-n">6</text><text x="220" y="118" class="lc-t" text-anchor="end">They fix their spot</text><text x="220" y="135" class="lc-s" text-anchor="end">and walk to you</text></g>
+        <!-- nodes -->
+        <g class="lc-node n-gps"><circle cx="380" cy="95" r="46"/><text x="380" y="88">GPS</text><text x="380" y="106" class="sm">satellites</text></g>
+        <g class="lc-node n-me"><circle cx="578" cy="228" r="46"/><text x="578" y="222">Your</text><text x="578" y="240" class="sm">phone</text></g>
+        <g class="lc-node n-bt"><circle cx="550" cy="428" r="46"/><text x="550" y="422">Phones</text><text x="550" y="440" class="sm">nearby</text></g>
+        <g class="lc-node n-lora"><circle cx="380" cy="505" r="46"/><text x="380" y="499">Mesh</text><text x="380" y="517" class="sm">radio</text></g>
+        <g class="lc-node n-sat"><circle cx="210" cy="428" r="46"/><text x="210" y="422">Signal</text><text x="210" y="440" class="sm">again</text></g>
+        <g class="lc-node n-grp"><circle cx="182" cy="228" r="46"/><text x="182" y="222">Your</text><text x="182" y="240" class="sm">group</text></g>
+        <text x="380" y="292" class="lc-mid">the message</text>
+        <text x="380" y="312" class="lc-mid sm">goes around</text>
+      </svg>
+      </div>
+      <div class="lc-key"><span><i class="k use"></i>Used in my design</span><span><i class="k alt"></i>Other routes that exist today</span></div>
+      <ol class="lc-links">
+        <li><b>GPS satellites → your phone.</b> Satellites only broadcast, so positioning works with no network at all. Since Selective Availability was switched off on May 1, 2000, civilian accuracy has been about 10–20 m or better (gps.gov).</li>
+        <li><b>Your phone → phones nearby.</b> A sealed message hops by Bluetooth or peer-to-peer Wi-Fi to any phone running the app within range. Range in a dense crowd is the biggest unknown; the original Bluetooth 1.0 was rated for about 33 ft.</li>
+        <li><b>Phones → a long-range mesh radio.</b> Projects like Meshtastic pair a phone over Bluetooth with a small LoRa radio that reaches typically 2–5 km. This needs extra hardware, so my design does not use it.</li>
+        <li><b>Mesh radio → back in signal.</b> Whichever device first reaches a working tower, or a satellite text service such as Apple's Emergency SOS via satellite or T-Mobile's T-Satellite, passes the message up.</li>
+        <li><b>→ Your group or rescuers.</b> In my design this is the last phone-to-phone hop: a carrier walks within range of a group member, and the message opens on their phone only.</li>
+        <li><b>Your group → GPS → you.</b> Their phones fix their own position from the same satellites, show distance and direction to your last spot, and the reply makes the same trip back.</li>
+      </ol>
+      <figcaption><b>Figure 1.</b> How the technologies connect. Distances are the published figures cited in the text, not my measurements. LoRa and satellite texting are shown for context; I have not tested them.</figcaption>
+    </figure>
+  </section>
+
+  <section aria-labelledby="lc-grew">
+    <h2 id="lc-grew">How the technology grew</h2>
+    <p>Each piece of the loop arrived separately, over about thirty years. The pattern that stands out to me is that every step made phones better at knowing where they are, long before they got better at telling anyone.</p>
+    <div class="lc-tlkey" aria-hidden="true"><span><i style="background:var(--c-gps)"></i>Satellite positioning</span><span><i style="background:var(--c-bt)"></i>Bluetooth and Wi-Fi</span><span><i style="background:var(--c-lora)"></i>Long-range radio</span><span><i style="background:var(--c-sat)"></i>Satellite messaging</span><span><i style="background:var(--ink-2)"></i>Networking research</span><span><i style="background:var(--c-grp)"></i>Crowd research</span></div>
+    <ol class="lc-tl">
+      <li class="t-gps"><span class="y">1995</span><div><b>GPS reaches full operation</b><span>The U.S. Air Force declares the 24-satellite constellation fully operational on April 27 (U.S. Naval Observatory).</span></div></li>
+      <li class="t-bt"><span class="y">1999</span><div><b>Bluetooth 1.0</b><span>The first specification, a year after the Bluetooth SIG formed. Range about 33 ft.</span></div></li>
+      <li class="t-gps"><span class="y">2000</span><div><b>Full accuracy for everyone</b><span>Selective Availability, the deliberate degrading of civilian GPS, is switched off on May 1.</span></div></li>
+      <li class="t-net"><span class="y">2003</span><div><b>Delay-tolerant networking</b><span>Kevin Fall's SIGCOMM paper proposes networks that store messages and forward them when a contact appears, instead of assuming a live path.</span></div></li>
+      <li class="t-crowd"><span class="y">2013</span><div><b>Crowds measured by Bluetooth</b><span>A study at a large music festival with more than 130,000 participants maps how festival crowds move and cluster (Larsen et al.).</span></div></li>
+      <li class="t-bt"><span class="y">2014</span><div><b>Phone mesh goes mainstream</b><span>FireChat, chaining phones over Bluetooth and Wi-Fi, is downloaded more than 100,000 times in Hong Kong in a single 24-hour period (CNN).</span></div></li>
+      <li class="t-bt"><span class="y">2019</span><div><b>Strangers' phones as carriers</b><span>Apple announces offline finding in Find My: nearby Apple devices detect a lost device over Bluetooth and report its location, encrypted, to the owner.</span></div></li>
+      <li class="t-lora"><span class="y">2020</span><div><b>Cheap long-range mesh</b><span>Meshtastic starts as an open-source project using unlicensed LoRa radios, typically 2–5 km per hop.</span></div></li>
+      <li class="t-sat"><span class="y">2022</span><div><b>Phones talk to satellites</b><span>On December 1, a stranded snowmobiler in Alaska is rescued in the first reported use of iPhone Emergency SOS via satellite (Alaska State Troopers, via 9to5Mac).</span></div></li>
+      <li class="t-sat"><span class="y">2025</span><div><b>Satellite texting for ordinary plans</b><span>T-Mobile launches T-Satellite on July 23, texting through 657 Starlink direct-to-cell satellites, covering more than 500,000 square miles with little or no coverage. Apple also adds a Wi-Fi Aware framework in iOS 26 for background phone-to-phone links between paired devices.</span></div></li>
+    </ol>
+  </section>
+
+  <section aria-labelledby="lc-cases">
+    <h2 id="lc-cases">Case studies</h2>
+    <p>Each case below shows a part of the problem: where networks fail, what worked, and what went wrong. None is my own work.</p>
+    <div class="lc-cases">
+      <div class="case"><span class="where">Hong Kong · September 2014</span><b>FireChat during the protests</b><p>More than 100,000 people downloaded FireChat in one 24-hour period to message without the mobile network, chaining phones over Bluetooth and Wi-Fi.</p><p class="note"><b>Drawback:</b> its makers said it was not meant for private communication. <b>Lesson:</b> people adopt a mesh fast when the network fails, so its security has to be right before that moment, not after.</p></div>
+      <div class="case"><span class="where">Research · 2021 and 2022</span><b>Bridgefy broken, twice</b><p>Security researchers showed that Bridgefy's Bluetooth mesh allowed tracking, impersonation and reading messages. After the company switched to the Signal protocol, a second team showed private messages could still be read.</p><p class="note"><b>Lesson:</b> a well-known encryption library is not enough on its own. I treat my own security claims as unproven until someone else reviews them.</p></div>
+      <div class="case"><span class="where">Western North Carolina · September 2024</span><b>Hurricane Helene's communications blackout</b><p>Helene knocked out most of the region's cell towers and cut about 200,000 internet and phone customers off, with power outages lasting weeks. More than 1,700 miles of fiber were destroyed (Asheville Watchdog, 2025).</p><p class="note"><b>Lesson:</b> outages are not only crowd congestion. When towers and power both fail, anything that needs infrastructure fails with them.</p></div>
+      <div class="case"><span class="where">Spain and Portugal · April 28, 2025</span><b>The Iberian blackout</b><p>A power outage across a region of more than 50 million people knocked out subways, traffic lights and ATMs. Calls failed on some mobile networks while some apps kept working (Associated Press).</p><p class="note"><b>Lesson:</b> even in a rich, well-connected region, phone service can go down in minutes, with millions of people out in the streets at once.</p></div>
+      <div class="case"><span class="where">Northwest Alaska · December 1, 2022</span><b>First reported satellite SOS rescue</b><p>A snowmobiler stranded between Noorvik and Kotzebue used iPhone Emergency SOS via satellite. Apple's response center alerted the Alaska State Troopers, and volunteers found him using the GPS coordinates sent.</p><p class="note"><b>Drawback:</b> satellite links need open sky and send short, slow messages. They suit one person in the wilderness, not a crowd under a stadium roof.</p></div>
+      <div class="case"><span class="where">A large music festival · 2013</span><b>Measuring how a crowd moves</b><p>Researchers used Bluetooth sensing at a festival with more than 130,000 participants over 8 days to map how people moved and gathered (Larsen et al., 2013).</p><p class="note"><b>Lesson:</b> crowds cluster and then mix at predictable times. That is the movement a relay would ride on, and it is why I test more than random walking.</p></div>
+      <div class="case"><span class="where">Apple devices · 2019 onward</span><b>Find My offline finding</b><p>Hundreds of millions of Apple devices quietly relay the Bluetooth beacons of lost devices. A 2021 analysis found it mostly meets its privacy goals but identified two flaws that allowed location correlation, partly fixed by Apple.</p><p class="note"><b>Lesson:</b> strangers' phones can be trusted carriers if they never learn what they carry. The design has to hide who, not just what.</p></div>
+      <div class="case"><span class="where">DEF CON and Hamvention · 2024</span><b>Mesh radios at large gatherings</b><p>Meshtastic developers built event firmware for DEF CON to handle 2,000–2,500 radios at once. At Hamvention 2024, one user's internet bridge flooded the local mesh with traffic and it crashed.</p><p class="note"><b>Lesson:</b> meshes fail by being too busy, not only by being too sparse. Limits on copies and hops are a safety feature.</p></div>
+    </div>
+  </section>
+
+  <section aria-labelledby="lc-sim">
+    <h2 id="lc-sim">A first simulation</h2>
+    <p>Before any field test, I wrote a small simulation to see which assumptions matter. It is synthetic: a made-up 900 × 600 m site with five attractions, ten groups of four, and six hours. I compared three ways of passing messages: copy to every app user (my design, with an expiry and a hop limit), Spray and Wait (8 copies), and own group only. I also compared two ways of moving: random walking, and walking between attractions on an hourly timetable.</p>
+    <div class="pair">
+      <div class="chart" role="img" aria-label="Median minutes to reach a group member with 120 app users, timetable movement: copy to every app user 17, Spray and Wait 41, own group only 92">
+        <span class="ct">Median minutes to reach a group member<br><span class="unit">120 app users, timetable movement</span></span>
+        <div class="brow"><span class="bl">Copy to every app user</span><span class="bt"><i style="width:18%"></i></span><span class="bv">17</span></div>
+        <div class="brow"><span class="bl">Spray and Wait</span><span class="bt"><i style="width:45%"></i></span><span class="bv">41</span></div>
+        <div class="brow"><span class="bl">Own group only</span><span class="bt"><i style="width:100%;background:var(--clay)"></i></span><span class="bv">92</span></div>
+        <span class="unit">Own group only also lost 28% of messages entirely.</span>
+      </div>
+      <div class="chart" role="img" aria-label="Median minutes by assumed radio range: 5 m 122, 10 m 50, 20 m 23, 30 m 17, 50 m 12">
+        <span class="ct">The assumption that matters most: radio range<br><span class="unit">Copy to every app user, 120 app users</span></span>
+        <div class="brow"><span class="bl">5 m</span><span class="bt"><i style="width:100%;background:var(--clay)"></i></span><span class="bv">122</span></div>
+        <div class="brow"><span class="bl">10 m</span><span class="bt"><i style="width:41%"></i></span><span class="bv">50</span></div>
+        <div class="brow"><span class="bl">20 m</span><span class="bt"><i style="width:19%"></i></span><span class="bv">23</span></div>
+        <div class="brow"><span class="bl">30 m</span><span class="bt"><i style="width:14%"></i></span><span class="bv">17</span></div>
+        <div class="brow"><span class="bl">50 m</span><span class="bt"><i style="width:10%"></i></span><span class="bv">12</span></div>
+        <span class="unit">At 5 m, 17% of messages never arrived.</span>
+      </div>
+    </div>
+    <ul class="limits">
+      <li><b>How people move matters.</b> With timetable movement, messages were slower at every crowd size than with random walking: a median of 27 vs 10 minutes with 60 app users. Random walking, the default in most relay studies, makes relays look better than they would be.</li>
+      <li><b>Strangers do most of the work.</b> With only your own group carrying, 27–42% of messages never arrived within six hours under timetable movement. With every app user carrying, all of them did.</li>
+      <li><b>Copy limits are a fair trade.</b> Spray and Wait kept each message on about 10 phones instead of every phone, at 1.4–5.6 times the delay, and still delivered 98–100%.</li>
+    </ul>
+    <p class="note">These numbers come from assumed inputs. The simulation leaves out interference, battery, phones going to sleep and session limits, so they are the most optimistic case. Real radio range in a crowd is the first thing the field test has to measure.</p>
+  </section>
+
+  <section aria-labelledby="lc-geo">
+    <h2 id="lc-geo">Where spatial data science and GeoAI come in</h2>
+    <p>What is built today is rule-based geometry, not AI: great-circle distance and compass bearing to a friend, the nearest named place turned into words ("300 ft northeast of the info tent"), walk times at about 1 m/s, and GPS cleaning that throws out fixes that are too inaccurate or too fast to be walking. The constants are values I set by hand, not fitted.</p>
+    <p>The GeoAI questions are next, and each has to beat the simple rule it replaces:</p>
+    <ul class="limits">
+      <li><b>A lost person's likely position.</b> Instead of "last seen here, 12 minutes ago," a probability area that grows with time, stays inside the site and leans toward where people go at that hour. Tested by whether the person really falls inside it as often as claimed.</li>
+      <li><b>Crowd density over time.</b> From timetables and opt-in counts kept on the phone, with privacy protection designed before any pooling.</li>
+      <li><b>Meeting points</b> that are equally reachable for the whole group and away from places about to fill up.</li>
+      <li><b>Feeding the relay</b>: the same movement estimates could replace random walking in the simulation.</li>
+    </ul>
+    <p>One finding shapes all of this. I checked the official site maps for 97 large U.S. events: 24 had a map I could find, none was geographically calibrated, and none allowed offline reuse. Organizer maps are drawings, not GPS maps, so the first spatial problem is georeferencing them.</p>
+  </section>
+
+  <section aria-labelledby="lc-not">
+    <h2 id="lc-not">What this does not show</h2>
+    <ul class="limits">
+      <li>No delivery rate, delivery time or battery cost has been measured on real phones.</li>
+      <li>The security design has not been reviewed by anyone else. After Bridgefy, I don't count my own claims as evidence.</li>
+      <li>On iPhones, phone-to-phone frameworks generally work only while the app is open, so the real pool of carriers may be much smaller than the number of installs.</li>
+      <li>People without the app, with older phones or on another platform can neither send nor carry. Who this helps, and who it misses, is part of the research question.</li>
+    </ul>
+    <p>The full proposal, with the evaluation plan, open questions, possible supervisors and every reference, is <a href="https://github.com/jhovenf98/geoai-for-cities/blob/lost-in-the-crowd/research/lost-in-the-crowd/docs/PROPOSAL.md" target="_blank" rel="noopener">on GitHub</a>.</p>
+    <p class="note">I used an AI assistant (Claude) to help check sources, write and test the simulation, and draft parts of this text. I chose the question and the design, and I am responsible for every claim.</p>
+  </section>
+
+  <section aria-labelledby="lc-src">
+    <h2 id="lc-src">Sources</h2>
+    <ol class="src">
+      <li>U.S. Naval Observatory. <a href="https://www.cnmoc.usff.navy.mil/our-commands/united-states-naval-observatory/precise-time-department/global-positioning-system/global-positioning-system-overview">GPS overview</a> (full operational capability, April 27, 1995).</li>
+      <li>GPS.gov. <a href="https://gps.gov/selective-availability">Selective Availability</a> (switched off May 1, 2000; accuracy 10–20 m or better).</li>
+      <li>Android Central. <a href="https://www.androidcentral.com/history-major-bluetooth-releases-and-updates">A history of the major Bluetooth releases</a> (Bluetooth 1.0, 1999).</li>
+      <li>Fall, K. (2003). A delay-tolerant network architecture for challenged internets. ACM SIGCOMM. <a href="https://researchr.org/publication/Fall03">researchr.org</a>.</li>
+      <li>Larsen, J. E., et al. (2013). Crowds, Bluetooth, and rock'n'roll: Understanding music festival participant behavior. <a href="https://arxiv.org/abs/1306.3133">arXiv:1306.3133</a>.</li>
+      <li>CNN Money (September 30, 2014). <a href="https://money.cnn.com/2014/09/30/news/firechat-hong-kong-protest/index.html">This app is helping Hong Kong protesters organize without a cell network</a>.</li>
+      <li>Albrecht, M. R., Blasco, J., Jensen, R. B., and Mareková, L. (2021). Mesh messaging in large-scale protests: Breaking Bridgefy. <a href="https://ia.cr/2021/214">ia.cr/2021/214</a>.</li>
+      <li>Albrecht, M. R., Eikenberg, R., and Paterson, K. G. (2022). Breaking Bridgefy, again. USENIX Security. <a href="https://www.usenix.org/conference/usenixsecurity22/presentation/albrecht">usenix.org</a>.</li>
+      <li>9to5Mac (June 5, 2019). <a href="https://9to5mac.com/2019/06/05/ios-13-macos-catalina-find-my/">iOS 13 and macOS Catalina: Find My</a>.</li>
+      <li>Heinrich, A., Stute, M., Kornhuber, T., and Hollick, M. (2021). Who can find my devices? PoPETs 2021(3). <a href="https://petsymposium.org/popets/2021/popets-2021-0045.php">petsymposium.org</a>.</li>
+      <li>Wikipedia. <a href="https://en.wikipedia.org/wiki/Meshtastic">Meshtastic</a> (origin, range, DEF CON and Hamvention 2024), used for dates and events only.</li>
+      <li>9to5Mac (December 2, 2022). <a href="https://9to5mac.com/2022/12/02/use-of-emergency-sos/">First reported use of Emergency SOS via satellite</a>.</li>
+      <li>Asheville Watchdog, via Benton Institute (October 2025). <a href="https://www.benton.org/headlines/helene-created-unprecedented-communications-blackout-year-later-vulnerabilities-remain">Helene created an unprecedented communications blackout</a>.</li>
+      <li>Associated Press, via FOX 29 (April 28, 2025). <a href="https://www.fox29.com/news/spain-portugal-power-outage-blackout">Spain, Portugal power outage knocks out subway networks, cuts phone service</a>.</li>
+      <li>Wireless Estimator (2025). <a href="https://wirelessestimator.com/articles/2025/t-mobile-to-launch-t-satellite-first-u-s-satellite-to-phone-service-with-spacexs-starlink/">T-Mobile to launch T-Satellite with SpaceX's Starlink</a>.</li>
+      <li>Apple. <a href="https://developer.apple.com/documentation/wifiaware">Wi-Fi Aware framework</a> (iOS 26).</li>
+    </ol>
+  </section>
+
+    </article>
+  </div>
+
   <div class="page blog-page" id="blog-view" hidden>
     <a class="back" href="#">Home</a>
     <header class="bl-head">
@@ -3479,6 +3745,15 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
     <section class="bl-group" aria-labelledby="bl-pub">
       <h2 id="bl-pub">Published</h2>
       <ol class="bl-list bs-num">
+        <li class="bl-item">
+          <a href="#lost">
+            <span class="bs-n bs-n-sm" aria-hidden="true">New</span>
+            <span class="bl-meta">Research proposal, draft, November 2026</span>
+            <span class="bl-title">Lost in the Crowd: Can Phones Carry Messages When the Network Fails?</span>
+            <span class="bl-dek">When crowds overload the network or the towers go down, can phones pass sealed messages hand to hand until "I'm lost" reaches the right people? Case studies, how GPS, Bluetooth, mesh radio and satellite texting fit together, and a first simulation.</span>
+            <span class="bl-topics">Proposal, mobility, networks, simulation</span>
+          </a>
+        </li>
         <li class="bl-item">
           <a href="#salton">
             <span class="bs-n bs-n-sm" aria-hidden="true">New</span>
@@ -4614,7 +4889,7 @@ body:has(#home:not([hidden])) .collar, html.on-home .collar { background: #EFE6D
     const inRes = h === 'research' || /^r-/.test(h);
     const PAGE_OF = { about: 'about-view', legend: 'about-view', contact: 'about-view', track: 'about-view', pathway: 'about-view', pathway: 'about-view', cases: 'blog-view', index: 'blog-view', notes: 'blog-view', blog: 'blog-view', map: 'map-view' };
     
-    PAGE_OF['part-2'] = 'part-2-view'; PAGE_OF['part-3'] = 'part-3-view'; PAGE_OF['salton'] = 'salton-view'; PAGE_OF['projects'] = 'projects-view'; PAGE_OF['proj-shade'] = 'proj-shade-view'; PAGE_OF['proj-curbcall'] = 'proj-curbcall-view'; PAGE_OF['proj-geoai'] = 'proj-geoai-view'; PAGE_OF['proj-logan-heights'] = 'proj-logan-heights-view'; PAGE_OF['proj-city-heights'] = 'proj-city-heights-view'; PAGE_OF['proj-revelle-plaza'] = 'proj-revelle-plaza-view'; PAGE_OF['proj-cad-georeferencing'] = 'proj-cad-georeferencing-view'; PAGE_OF['proj-drone-initiative'] = 'proj-drone-initiative-view'; PAGE_OF['proj-arcgis-indoors'] = 'proj-arcgis-indoors-view'; PAGE_OF['proj-stormwater'] = 'proj-stormwater-view'; PAGE_OF['proj-ai-urban-dynamics'] = 'proj-ai-urban-dynamics-view'; PAGE_OF['proj-eyes-in-the-sky'] = 'proj-eyes-in-the-sky-view'; PAGE_OF['proj-urban-material-flows'] = 'proj-urban-material-flows-view'; PAGE_OF['proj-la-jolla-village-square'] = 'proj-la-jolla-village-square-view';
+    PAGE_OF['part-2'] = 'part-2-view'; PAGE_OF['part-3'] = 'part-3-view'; PAGE_OF['salton'] = 'salton-view'; PAGE_OF['lost'] = 'lost-view'; PAGE_OF['projects'] = 'projects-view'; PAGE_OF['proj-shade'] = 'proj-shade-view'; PAGE_OF['proj-curbcall'] = 'proj-curbcall-view'; PAGE_OF['proj-geoai'] = 'proj-geoai-view'; PAGE_OF['proj-logan-heights'] = 'proj-logan-heights-view'; PAGE_OF['proj-city-heights'] = 'proj-city-heights-view'; PAGE_OF['proj-revelle-plaza'] = 'proj-revelle-plaza-view'; PAGE_OF['proj-cad-georeferencing'] = 'proj-cad-georeferencing-view'; PAGE_OF['proj-drone-initiative'] = 'proj-drone-initiative-view'; PAGE_OF['proj-arcgis-indoors'] = 'proj-arcgis-indoors-view'; PAGE_OF['proj-stormwater'] = 'proj-stormwater-view'; PAGE_OF['proj-ai-urban-dynamics'] = 'proj-ai-urban-dynamics-view'; PAGE_OF['proj-eyes-in-the-sky'] = 'proj-eyes-in-the-sky-view'; PAGE_OF['proj-urban-material-flows'] = 'proj-urban-material-flows-view'; PAGE_OF['proj-la-jolla-village-square'] = 'proj-la-jolla-village-square-view';
     const pg = PAGE_OF[h] || null;
     const wasArt = !art.hidden;
     art.hidden = !inArt; research.hidden = !inRes; home.hidden = inArt || inFlint || inRes || !!pg;

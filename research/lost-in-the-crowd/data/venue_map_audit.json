@@ -1,0 +1,36 @@
+{
+ "note": "Aggregate counts from my audit of official site maps for 97 large U.S. events (snapshot 2026-11-11). Organizer maps and links are not redistributed.",
+ "map_status": {
+  "not yet researched or verified": 64,
+  "older edition, reference only": 14,
+  "current edition found or linked (incl. preliminary)": 6,
+  "other (venue only, page found without asset, app map mentioned, map not yet released, etc.)": 13
+ },
+ "gps_alignment": {
+  "no map data verified": 73,
+  "map found but no geographic calibration established": 24,
+  "calibrated": 0
+ },
+ "reuse_permission_confirmed": 0,
+ "download_check": {
+  "no direct file": 73,
+  "direct file opens": 22,
+  "viewer or link, download unverified": 2
+ },
+ "pins": {
+  "total": 55,
+  "on hold": 55,
+  "with coordinates": 2,
+  "evidence": {
+   "schedule label": 45,
+   "organizer map label": 8,
+   "published landmark coordinates": 2
+  },
+  "type": {
+   "stage or attraction": 50,
+   "entrance or shuttle": 3,
+   "proposed meeting point": 2
+  }
+ },
+ "events": 97
+}

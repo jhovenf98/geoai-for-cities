@@ -1,0 +1,106 @@
+waypoint  epidemic     n=   60 seed=1  delivered=1.00  median=10.425373979040032  copies=60
+waypoint  epidemic     n=   60 seed=2  delivered=1.00  median=8.843835565591917  copies=60
+waypoint  epidemic     n=   60 seed=3  delivered=1.00  median=9.990069718833425  copies=60
+waypoint  epidemic     n=  120 seed=1  delivered=1.00  median=7.240153117128784  copies=120
+waypoint  epidemic     n=  120 seed=2  delivered=1.00  median=7.1910998548582405  copies=120
+waypoint  epidemic     n=  120 seed=3  delivered=1.00  median=8.194416089133973  copies=120
+waypoint  epidemic     n=  250 seed=1  delivered=1.00  median=5.814808420000077  copies=250
+waypoint  epidemic     n=  250 seed=2  delivered=1.00  median=5.91041672139407  copies=250
+waypoint  epidemic     n=  250 seed=3  delivered=1.00  median=6.093589625445035  copies=250
+waypoint  epidemic     n=  500 seed=1  delivered=1.00  median=4.891393892741083  copies=500
+waypoint  epidemic     n=  500 seed=2  delivered=1.00  median=4.399370923773207  copies=500
+waypoint  epidemic     n=  500 seed=3  delivered=1.00  median=5.175932036832834  copies=500
+waypoint  epidemic     n= 1000 seed=1  delivered=1.00  median=4.226924302840852  copies=1000
+waypoint  epidemic     n= 1000 seed=2  delivered=1.00  median=3.9387096954600027  copies=1000
+waypoint  epidemic     n= 1000 seed=3  delivered=1.00  median=3.8390383436507363  copies=1000
+waypoint  spray        n=   60 seed=1  delivered=1.00  median=14.354999152202723  copies=10
+waypoint  spray        n=   60 seed=2  delivered=1.00  median=10.455059167827912  copies=10
+waypoint  spray        n=   60 seed=3  delivered=1.00  median=13.781772271374015  copies=10
+waypoint  spray        n=  120 seed=1  delivered=1.00  median=11.470072734408276  copies=10
+waypoint  spray        n=  120 seed=2  delivered=1.00  median=11.9620009666782  copies=11
+waypoint  spray        n=  120 seed=3  delivered=1.00  median=12.385277565910009  copies=10
+waypoint  spray        n=  250 seed=1  delivered=1.00  median=10.743353103022951  copies=10
+waypoint  spray        n=  250 seed=2  delivered=1.00  median=10.990301003957612  copies=10
+waypoint  spray        n=  250 seed=3  delivered=1.00  median=9.65000438908587  copies=10
+waypoint  spray        n=  500 seed=1  delivered=1.00  median=12.405773498731238  copies=10
+waypoint  spray        n=  500 seed=2  delivered=1.00  median=8.857769726591295  copies=10
+waypoint  spray        n=  500 seed=3  delivered=1.00  median=10.503676108664004  copies=10
+waypoint  spray        n= 1000 seed=1  delivered=1.00  median=11.172513286556295  copies=11
+waypoint  spray        n= 1000 seed=2  delivered=1.00  median=10.320700941603498  copies=11
+waypoint  spray        n= 1000 seed=3  delivered=1.00  median=10.484558578243696  copies=11
+waypoint  friends_only n=   60 seed=1  delivered=0.98  median=50.53051967130035  copies=4
+waypoint  friends_only n=   60 seed=2  delivered=0.98  median=46.01850844738721  copies=4
+waypoint  friends_only n=   60 seed=3  delivered=0.99  median=40.85954537078569  copies=4
+waypoint  friends_only n=  120 seed=1  delivered=0.97  median=41.02201488339476  copies=4
+waypoint  friends_only n=  120 seed=2  delivered=0.99  median=65.91386536768465  copies=4
+waypoint  friends_only n=  120 seed=3  delivered=0.99  median=40.92691412660101  copies=4
+waypoint  friends_only n=  250 seed=1  delivered=0.97  median=48.74849769902579  copies=4
+waypoint  friends_only n=  250 seed=2  delivered=0.99  median=51.18646943559775  copies=4
+waypoint  friends_only n=  250 seed=3  delivered=0.99  median=45.97225868958427  copies=4
+waypoint  friends_only n=  500 seed=1  delivered=0.99  median=50.08153721948838  copies=4
+waypoint  friends_only n=  500 seed=2  delivered=0.99  median=40.09222541419125  copies=4
+waypoint  friends_only n=  500 seed=3  delivered=0.99  median=44.10355412713755  copies=4
+waypoint  friends_only n= 1000 seed=1  delivered=1.00  median=52.84168333250422  copies=4
+waypoint  friends_only n= 1000 seed=2  delivered=1.00  median=43.55876088715027  copies=4
+waypoint  friends_only n= 1000 seed=3  delivered=1.00  median=43.26735275140831  copies=4
+schedule  epidemic     n=   60 seed=1  delivered=1.00  median=23.650217342820845  copies=60
+schedule  epidemic     n=   60 seed=2  delivered=1.00  median=27.286474997307167  copies=60
+schedule  epidemic     n=   60 seed=3  delivered=1.00  median=27.394262674534165  copies=60
+schedule  epidemic     n=  120 seed=1  delivered=1.00  median=17.692595533904417  copies=120
+schedule  epidemic     n=  120 seed=2  delivered=1.00  median=17.0563064581127  copies=120
+schedule  epidemic     n=  120 seed=3  delivered=1.00  median=14.06491716226661  copies=120
+schedule  epidemic     n=  250 seed=1  delivered=1.00  median=11.837129616410273  copies=250
+schedule  epidemic     n=  250 seed=2  delivered=1.00  median=12.152432375228955  copies=250
+schedule  epidemic     n=  250 seed=3  delivered=1.00  median=10.441796716435496  copies=250
+schedule  epidemic     n=  500 seed=1  delivered=1.00  median=9.30868050360729  copies=500
+schedule  epidemic     n=  500 seed=2  delivered=1.00  median=8.588067019877569  copies=500
+schedule  epidemic     n=  500 seed=3  delivered=1.00  median=8.189109667226527  copies=500
+schedule  epidemic     n= 1000 seed=1  delivered=1.00  median=6.818610441021777  copies=1000
+schedule  epidemic     n= 1000 seed=2  delivered=1.00  median=7.069361058771046  copies=1000
+schedule  epidemic     n= 1000 seed=3  delivered=1.00  median=7.4668614250889505  copies=1000
+schedule  spray        n=   60 seed=1  delivered=1.00  median=46.2830258449751  copies=10
+schedule  spray        n=   60 seed=2  delivered=0.95  median=46.38748121263171  copies=10
+schedule  spray        n=   60 seed=3  delivered=0.99  median=52.965937615344544  copies=10
+schedule  spray        n=  120 seed=1  delivered=1.00  median=55.51911621231595  copies=10
+schedule  spray        n=  120 seed=2  delivered=1.00  median=41.24063978426556  copies=10
+schedule  spray        n=  120 seed=3  delivered=1.00  median=33.955707856036796  copies=10
+schedule  spray        n=  250 seed=1  delivered=0.99  median=43.05409099489779  copies=10
+schedule  spray        n=  250 seed=2  delivered=0.99  median=32.22718859276617  copies=10
+schedule  spray        n=  250 seed=3  delivered=0.99  median=32.3857437604511  copies=10
+schedule  spray        n=  500 seed=1  delivered=1.00  median=48.133664636267014  copies=10
+schedule  spray        n=  500 seed=2  delivered=0.99  median=31.61237289252104  copies=10
+schedule  spray        n=  500 seed=3  delivered=0.98  median=33.118980600973664  copies=10
+schedule  spray        n= 1000 seed=1  delivered=1.00  median=36.857263864059206  copies=11
+schedule  spray        n= 1000 seed=2  delivered=1.00  median=38.85094505746662  copies=11
+schedule  spray        n= 1000 seed=3  delivered=0.98  median=45.29948059643905  copies=11
+schedule  friends_only n=   60 seed=1  delivered=0.80  median=80.465355562061  copies=3
+schedule  friends_only n=   60 seed=2  delivered=0.64  median=77.96153823520208  copies=3
+schedule  friends_only n=   60 seed=3  delivered=0.74  median=99.79279983585245  copies=3
+schedule  friends_only n=  120 seed=1  delivered=0.72  median=92.01250678703876  copies=3
+schedule  friends_only n=  120 seed=2  delivered=0.64  median=103.31480390140578  copies=3
+schedule  friends_only n=  120 seed=3  delivered=0.79  median=79.75731975443014  copies=3
+schedule  friends_only n=  250 seed=1  delivered=0.62  median=102.74310314538586  copies=3
+schedule  friends_only n=  250 seed=2  delivered=0.65  median=76.05099197995712  copies=3
+schedule  friends_only n=  250 seed=3  delivered=0.65  median=90.81576671889792  copies=3
+schedule  friends_only n=  500 seed=1  delivered=0.61  median=81.92682812530549  copies=3
+schedule  friends_only n=  500 seed=2  delivered=0.67  median=72.68954373975384  copies=3
+schedule  friends_only n=  500 seed=3  delivered=0.57  median=95.28469112188672  copies=3
+schedule  friends_only n= 1000 seed=1  delivered=0.45  median=61.48469204804825  copies=2
+schedule  friends_only n= 1000 seed=2  delivered=0.60  median=73.7135818978268  copies=3
+schedule  friends_only n= 1000 seed=3  delivered=0.69  median=92.28013336050819  copies=3
+range=  5 m seed=1  delivered=0.79  median=117.5029662287523
+range=  5 m seed=2  delivered=0.80  median=135.9918232589175
+range=  5 m seed=3  delivered=0.90  median=122.38255436961603
+range= 10 m seed=1  delivered=0.97  median=50.47222604684113
+range= 10 m seed=2  delivered=1.00  median=45.6495664203322
+range= 10 m seed=3  delivered=1.00  median=51.08399740805762
+range= 20 m seed=1  delivered=1.00  median=25.570969021760778
+range= 20 m seed=2  delivered=1.00  median=22.951802549769454
+range= 20 m seed=3  delivered=1.00  median=21.766479696731402
+range= 30 m seed=1  delivered=1.00  median=17.692595533904417
+range= 30 m seed=2  delivered=1.00  median=17.0563064581127
+range= 30 m seed=3  delivered=1.00  median=14.06491716226661
+range= 50 m seed=1  delivered=1.00  median=11.992528251854182
+range= 50 m seed=2  delivered=1.00  median=11.806104645856415
+range= 50 m seed=3  delivered=1.00  median=10.840744584263195
+wrote /home/claude/geoai-for-cities/research/lost-in-the-crowd/data/sim_results.json
